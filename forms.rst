@@ -50,10 +50,19 @@ There are two states to instantiate a form with, *bound* and *unbound*.
           })
 
 There's no perfect analogy for how Django's forms work (then, there isn't for
-anything). An instance of an unbound form could be thought of as a wheelie
-bin. You've provided the user with somewhere to put something, along with
+anything). An instance of an unbound form could be thought of as a wheelie bin.
+You've provided the user with somewhere to put something, along with
 instructions on how to pass the contents back to you (leave them out on
-Wednesday). And you could think of an instance of a bound form as a box with an
-electronic display panel on the side. You can't open the box to change what's
-inside, but you can see exactly what is inside and information about it via
-the panel.
+Wednesday). And you could think of an instance of a bound form as a box with
+an electronic display panel on the side. You can't open the box to change
+what's inside, but you can see exactly what is inside and information about it
+via the panel.
+
+Validation
+----------
+
+Bound forms have the ability to tell you whether or not the data they are
+associated with is *valid*. A form is considered valid if the data adheres
+to a set of rules defined in the form itself or it's fields.
+
+Unbound forms are always *invalid*.
